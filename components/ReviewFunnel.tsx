@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { company } from "@/lib/content";
 
@@ -199,9 +200,9 @@ export function ReviewFunnel() {
                   We really appreciate you taking the time. Someone from the
                   team will be in touch if needed.
                 </p>
-                <a href="/" className="btn-ghost mt-6">
+                <Link href="/" className="btn-ghost mt-6">
                   Back to homepage
-                </a>
+                </Link>
               </motion.div>
             )}
           </AnimatePresence>

@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { company, nav, areas, services } from "@/lib/content";
 import { NewsletterSignup } from "./NewsletterSignup";
 
@@ -106,12 +107,12 @@ export function Footer() {
               {Array.from({ length: 5 }).map((_, i) => (
                 <Star key={i} />
               ))}
-              <a
+              <Link
                 href="/feedback"
                 className="ml-3 text-xs text-offwhite/60 underline-offset-2 hover:text-offwhite hover:underline"
               >
                 Leave a review
-              </a>
+              </Link>
             </div>
           </div>
 

@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { reviews, siteImages, company } from "@/lib/content";
 import { SectionHeading } from "../ui/SectionHeading";
@@ -105,10 +106,10 @@ export function Reviews() {
           <p className="text-sm text-charcoal-500">
             Recently worked with us?
           </p>
-          <a href="/feedback" className="btn-ghost">
+          <Link href="/feedback" className="btn-ghost">
             <GoogleG />
             Leave a review
-          </a>
+          </Link>
         </div>
       </div>
     </section>
