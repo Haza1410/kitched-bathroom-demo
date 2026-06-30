@@ -100,48 +100,6 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Floating trust card */}
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.9, ease, delay: 0.6 }}
-        className="pointer-events-none absolute bottom-8 right-5 hidden w-[300px] xl:block xl:right-12"
-      >
-        <motion.div
-          animate={{ y: [0, -10, 0] }}
-          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-          className="pointer-events-auto overflow-hidden rounded-2xl border border-offwhite/15 bg-offwhite/10 p-3 shadow-float backdrop-blur-xl"
-        >
-          <div className="relative h-36 w-full overflow-hidden rounded-xl">
-            <Image
-              src={siteImages.heroCard.url}
-              alt={siteImages.heroCard.alt}
-              fill
-              sizes="300px"
-              className="object-cover"
-            />
-          </div>
-          <div className="flex items-center justify-between px-1 pt-3">
-            <div>
-              <div className="flex items-center gap-0.5 text-brass-light">
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <Star key={i} />
-                ))}
-              </div>
-              <p className="mt-1 text-xs font-medium text-offwhite/85">
-                5-star rated locally
-              </p>
-            </div>
-            <div className="text-right">
-              <p className="font-serif text-2xl text-offwhite">120+</p>
-              <p className="text-[10px] uppercase tracking-wider text-offwhite/60">
-                Renovations
-              </p>
-            </div>
-          </div>
-        </motion.div>
-      </motion.div>
-
       {/* Scroll hint */}
       <div className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 lg:block xl:left-12 xl:translate-x-0">
         <div className="flex items-center gap-2 text-offwhite/60">
@@ -155,13 +113,5 @@ export function Hero() {
         </div>
       </div>
     </section>
-  );
-}
-
-function Star() {
-  return (
-    <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
-      <path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z" />
-    </svg>
   );
 }

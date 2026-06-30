@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { company } from "@/lib/content";
 
@@ -10,18 +10,7 @@ export function ChatWidget() {
   const [open, setOpen] = useState(false);
   const [sent, setSent] = useState(false);
   const [name, setName] = useState("");
-  const [nudge, setNudge] = useState(false);
   const panelRef = useRef<HTMLDivElement>(null);
-
-  // Gentle one-time attention nudge after the visitor has settled in.
-  useEffect(() => {
-    const t = setTimeout(() => setNudge(true), 6000);
-    return () => clearTimeout(t);
-  }, []);
-
-  useEffect(() => {
-    if (open) setNudge(false);
-  }, [open]);
 
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -165,22 +154,6 @@ export function ChatWidget() {
       </AnimatePresence>
 
       <div className="flex items-center gap-3">
-        <AnimatePresence>
-          {nudge && !open && (
-            <motion.button
-              type="button"
-              onClick={() => setOpen(true)}
-              initial={{ opacity: 0, x: 12, scale: 0.9 }}
-              animate={{ opacity: 1, x: 0, scale: 1 }}
-              exit={{ opacity: 0, x: 12, scale: 0.9 }}
-              transition={{ duration: 0.4, ease }}
-              className="hidden rounded-2xl rounded-br-sm border border-charcoal-900/10 bg-offwhite px-4 py-2.5 text-sm font-medium text-charcoal-800 shadow-float sm:block"
-            >
-              Missed our call? We&apos;ll text you back 👋
-            </motion.button>
-          )}
-        </AnimatePresence>
-
         <motion.button
           type="button"
           onClick={() => setOpen((v) => !v)}
