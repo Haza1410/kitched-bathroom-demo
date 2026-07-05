@@ -23,7 +23,7 @@ const localBusinessSchema = {
     "Premium kitchen and bathroom renovations across Hertfordshire and North London — from design consultation to final installation.",
   telephone: company.phone,
   email: company.email,
-  url: "https://www.stonefordkb.co.uk",
+  url: company.siteUrl,
   priceRange: "££££",
   areaServed: areas.map((a) => ({ "@type": "City", name: a })),
   address: {

@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { whyChooseUs, stats, siteImages } from "@/lib/content";
+import { whyChooseUs, stats, siteImages, company } from "@/lib/content";
 import { SectionHeading } from "../ui/SectionHeading";
 import { Reveal } from "../ui/Reveal";
 
@@ -33,7 +33,7 @@ export function WhyChooseUs() {
         <div className="grid items-start gap-12 lg:grid-cols-[1fr_1.1fr] lg:gap-16">
           <div className="lg:sticky lg:top-28">
             <SectionHeading
-              eyebrow="Why choose Stoneford"
+              eyebrow={`Why choose ${company.shortName}`}
               title="A renovation team you can actually relax with."
               intro="We handle the design, the materials and the installation — and we keep you informed at every stage. No subcontracting chaos, no surprises."
             />

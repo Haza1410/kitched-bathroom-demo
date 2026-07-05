@@ -27,9 +27,9 @@ export function ReviewFunnel() {
       <div className="overflow-hidden rounded-[1.75rem] border border-charcoal-900/10 bg-white shadow-card">
         <div className="bg-charcoal-900 px-7 py-7 text-center text-offwhite">
           <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-brass font-serif text-xl font-semibold text-charcoal-950">
-            S
+            {company.monogram}
           </span>
-          <h1 className="mt-4 font-serif text-2xl">Stoneford Kitchens &amp; Bathrooms</h1>
+          <h1 className="mt-4 font-serif text-2xl">{company.name}</h1>
           <p className="mt-1 text-sm text-offwhite/70">
             We&apos;d love to hear how we did.
           </p>
@@ -210,7 +210,7 @@ export function ReviewFunnel() {
       </div>
 
       <p className="mt-5 text-center text-xs text-charcoal-400">
-        Powered by Stoneford · {company.region}
+        Powered by {company.shortName} · {company.region}
       </p>
     </div>
   );

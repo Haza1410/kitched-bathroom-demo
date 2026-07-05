@@ -44,7 +44,7 @@ export function Header() {
                 : "border-offwhite/40 bg-offwhite/10 text-offwhite backdrop-blur"
             }`}
           >
-            S
+            {company.monogram}
           </span>
           <span className="leading-tight">
             <span
@@ -52,7 +52,7 @@ export function Header() {
                 scrolled ? "text-charcoal-900" : "text-offwhite"
               }`}
             >
-              Stoneford
+              {company.shortName}
             </span>
             <span
               className={`block text-[10px] font-medium uppercase tracking-[0.2em] transition-colors duration-500 ${

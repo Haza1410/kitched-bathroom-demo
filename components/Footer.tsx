@@ -88,11 +88,11 @@ export function Footer() {
           <div>
             <div className="flex items-center gap-3">
               <span className="flex h-10 w-10 items-center justify-center rounded-full border border-offwhite/20 bg-offwhite/5 font-serif text-sm font-semibold text-offwhite">
-                S
+                {company.monogram}
               </span>
               <div className="leading-tight">
                 <span className="block font-serif text-base font-semibold text-offwhite">
-                  Stoneford
+                  {company.shortName}
                 </span>
                 <span className="block text-[10px] uppercase tracking-[0.2em] text-offwhite/50">
                   Kitchens &amp; Bathrooms

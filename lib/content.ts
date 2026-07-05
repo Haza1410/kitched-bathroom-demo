@@ -1,12 +1,14 @@
 import { siteImages, type SiteImageKey } from "./site-images";
 
 export const company = {
-  name: "Stoneford Kitchens & Bathrooms",
-  shortName: "Stoneford",
+  name: "Ashcombe Kitchens & Bathrooms",
+  shortName: "Ashcombe",
+  monogram: "A",
+  siteUrl: "https://www.ashcombekb.co.uk",
   phone: "01923 555 014",
   phoneHref: "tel:+441923555014",
   smsHref: "sms:+441923555014",
-  email: "hello@stonefordkb.co.uk",
+  email: "hello@ashcombekb.co.uk",
   tagline: "Premium kitchen & bathroom renovations",
   region: "Hertfordshire & North London",
   studio: "Design studio in Watford, Hertfordshire",
@@ -16,8 +18,9 @@ export const company = {
   addressLocality: "Watford, Hertfordshire",
   postcode: "WD17 1JA",
   // Public Google Business Profile review link (placeholder for the demo).
-  googleReviewUrl: "https://g.page/r/stoneford-kitchens-bathrooms/review",
-  googleProfileUrl: "https://www.google.com/maps/search/?q=Stoneford+Kitchens+%26+Bathrooms+Watford",
+  googleReviewUrl: "https://g.page/r/ashcombe-kitchens-bathrooms/review",
+  googleProfileUrl:
+    "https://www.google.com/maps/search/?q=Ashcombe+Kitchens+%26+Bathrooms+Watford",
   mapEmbed:
     "https://www.google.com/maps?q=Clarendon+Road,+Watford+WD17&z=14&output=embed",
   googleRating: "4.9",

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Fraunces, Plus_Jakarta_Sans } from "next/font/google";
+import { company } from "@/lib/content";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -17,14 +18,13 @@ const jakarta = Plus_Jakarta_Sans({
   display: "swap",
 });
 
-const siteUrl = "https://www.stonefordkb.co.uk";
+const siteUrl = company.siteUrl;
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default:
-      "Stoneford Kitchens & Bathrooms | Premium Renovations in Hertfordshire & North London",
-    template: "%s | Stoneford Kitchens & Bathrooms",
+    default: `${company.name} | Premium Renovations in ${company.region}`,
+    template: `%s | ${company.name}`,
   },
   description:
     "Premium kitchen and bathroom renovations across Hertfordshire and North London. From design consultation to final installation — beautiful kitchens, bathrooms and ensuites, fitted properly. Request a free quote.",
@@ -39,8 +39,8 @@ export const metadata: Metadata = {
     "shaker kitchen renovation",
     "walk-in shower installation",
   ],
-  authors: [{ name: "Stoneford Kitchens & Bathrooms" }],
-  creator: "Stoneford Kitchens & Bathrooms",
+  authors: [{ name: company.name }],
+  creator: company.name,
   alternates: {
     canonical: siteUrl,
   },
@@ -48,15 +48,14 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_GB",
     url: siteUrl,
-    siteName: "Stoneford Kitchens & Bathrooms",
-    title:
-      "Stoneford Kitchens & Bathrooms | Premium Renovations in Hertfordshire & North London",
+    siteName: company.name,
+    title: `${company.name} | Premium Renovations in ${company.region}`,
     description:
       "Beautiful kitchens and bathrooms, designed and fitted properly. Premium renovations across Hertfordshire and North London.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Stoneford Kitchens & Bathrooms",
+    title: company.shortName,
     description:
       "Premium kitchen and bathroom renovations across Hertfordshire and North London.",
   },

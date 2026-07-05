@@ -1,7 +1,8 @@
 import type { MetadataRoute } from "next";
+import { company } from "@/lib/content";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const base = "https://www.stonefordkb.co.uk";
+  const base = company.siteUrl;
   return [
     {
       url: base,

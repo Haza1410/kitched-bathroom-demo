@@ -1,4 +1,4 @@
-# Stoneford Kitchens & Bathrooms — Demo Website
+# Ashcombe Kitchens & Bathrooms — Demo Website
 
 A premium, high-converting demo website for a fictional kitchen & bathroom
 renovation company serving Hertfordshire & North London. Built as an agency

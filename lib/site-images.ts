@@ -1,7 +1,7 @@
 /**
  * CENTRAL IMAGE CONFIG
  * --------------------------------------------------------------------------
- * Every image used across the Stoneford site is defined here so it can be
+ * Every image used across the Ashcombe site is defined here so it can be
  * swapped for real project photography later. Each entry carries:
  *   - url:   a high-resolution royalty-free source (Unsplash) sized for use
  *   - alt:   SEO + accessibility focused alt text

@@ -26,7 +26,7 @@ export function ChatWidget() {
           <motion.div
             ref={panelRef}
             role="dialog"
-            aria-label="Message Stoneford"
+            aria-label={`Message ${company.shortName}`}
             initial={{ opacity: 0, y: 24, scale: 0.96 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 16, scale: 0.97 }}
@@ -47,10 +47,10 @@ export function ChatWidget() {
               </button>
               <div className="flex items-center gap-3">
                 <span className="flex h-11 w-11 items-center justify-center rounded-full bg-brass font-serif text-lg font-semibold text-charcoal-950">
-                  S
+                  {company.monogram}
                 </span>
                 <div>
-                  <p className="font-serif text-lg leading-tight">Stoneford</p>
+                  <p className="font-serif text-lg leading-tight">{company.shortName}</p>
                   <p className="flex items-center gap-1.5 text-xs text-offwhite/70">
                     <span className="flex h-1.5 w-1.5 rounded-full bg-green-400" />
                     Online · {company.responseTime.replace("We typically reply ", "replies ")}
